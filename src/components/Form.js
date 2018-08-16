@@ -2,11 +2,24 @@ import React,{ Component } from 'react';
 
 
 class Form extends Component {
+    state = {
+        inputValue: "HelloWorld"
+
+    }
+
+    handleChange = (evt) => {
+        console.log(evt.target.value);
+    }
 
    render() {
        return (
            <div className="Form">
-                This is form!
+                <form>
+                    <input
+                        onChange = {(evt) => this.handleChange(evt)}
+                        value = {this.state.inputValue} placeholder="input words"
+                    />
+                </form>
            </div>
        )
    }
