@@ -1,11 +1,21 @@
 import React, {Component} from 'react';
-
+import Task from './Task';
 
 class List extends Component {
+
     render() {
         return(
             <div className="List">
-                List Component
+                {this.props.todos.map(
+                    (todo,index)=>{
+                        return(
+                           <Task
+                               key={index}
+                               todo={todo}
+                           />
+                        )
+                    }
+                )}
             </div>
         )
     }
