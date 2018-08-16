@@ -11,6 +11,8 @@ class List extends Component {
                         return(
                            <Task
                                key={index}
+                               index={index}
+                               handleClick={this.props.handleClick}
                                todo={todo}
                            />
                         )

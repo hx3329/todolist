@@ -9,7 +9,7 @@ class Task extends Component {
                 <span style = {{ textDecoration: this.props.todo.done ? 'line-through':'none' }}>
                     {this.props.todo.value}
                 </span>
-                <button>{this.props.todo.done ? 'undo': 'compete'}</button>
+                <button onClick={()=>this.props.handleClick(this.props.index)}>{this.props.todo.done ? 'undo': 'compete'}</button>
             </div>
         )
     }
